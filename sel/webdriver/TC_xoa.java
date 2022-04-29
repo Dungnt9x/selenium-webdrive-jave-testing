@@ -5,5 +5,6 @@ public class TC_xoa {
 	//tc
   // an cỗ
 	// bổ sung nội dung
-	// c Mai béo
+	 c Mai béo
+	 //test thử
 }
