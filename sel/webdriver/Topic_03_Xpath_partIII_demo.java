@@ -40,7 +40,9 @@ public class Topic_03_Xpath_partIII_demo {
 		//span[starts-with(text(),'IPhone')]"));
 	    //LẤY TƯƠNG ĐỐI TRÊN TRANG LAZADA, thao tác với ô nhập Phone Number ở màn signin
 		//input[starts-with(@data-spm-anchor-id,'a2o4n.login_signup')]"));
-	
+	    //LẤY TUYỆT ĐỐI VỚI TEXT()= ->(http://live.techpanda.org/)- verify text "IPhone was added to your shopping cart.")
+	    //span[text()='IPhone was added to your shopping cart.']
+	    
         //DÙNG TEXT (https://automationfc.github.io/) -> tính năng FORM BASIC
 	    //h5[contains(text(),'Hello World!')]
 	    //h5[contains(text(),"I'm a Hacker")] -> text có nháy đơn thì dùng nháy đôi thay thế
