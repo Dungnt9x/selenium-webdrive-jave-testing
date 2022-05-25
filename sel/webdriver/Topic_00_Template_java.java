@@ -86,4 +86,12 @@ public class Topic_00_Template_java {
 	public void afterClass() {
 		driver.quit();
 	}
+	public void sleepInSecond(long timeInSecond) {
+		try {
+			Thread.sleep(timeInSecond * 1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
