@@ -73,6 +73,6 @@ public class Topic_13_CSS_demo {
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		driver.quit(); 
 	}
 }

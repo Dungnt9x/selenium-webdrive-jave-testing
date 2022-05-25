@@ -27,7 +27,7 @@ public class Topic_03_Xpath_partII_exercise_1 {
 	}
 
 	@Test
-	public void Register_01_Empty_Data() { 
+	public void Register_01_Empty_Data() {
 		//Mở app ra
 		driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 		//Click vào đăng ký button

@@ -109,7 +109,7 @@ public class Topic_03_Xpath_partV_exercise_2_login {
 		driver.findElement(By.xpath("//a[text()='Log Out']")).click();
 		
 
-	}
+	} 
 	
 	@Test
 	public void Login_06_Valid_Email_Pass() { 
