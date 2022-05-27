@@ -27,7 +27,7 @@ public class Topic_18_web_element_exercise2 {
 		driver.manage().window().maximize();
 	}
 
-	//@Test
+	@Test
 	public void TC_01_Displayed() { 
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		WebElement emailTextbox = driver.findElement(By.cssSelector("#mail"));
@@ -62,7 +62,7 @@ public class Topic_18_web_element_exercise2 {
 		}
 	}
 
-	//@Test
+	@Test
 	public void TC_02_Enable_Disable() {
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		WebElement emailTextbox = driver.findElement(By.cssSelector("#mail"));
@@ -111,7 +111,7 @@ public class Topic_18_web_element_exercise2 {
 	}
 
 	
-	//@Test
+	@Test
 	public void TC_03_Selected() { 
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		WebElement ageUnder18Radio = driver.findElement(By.cssSelector("#under_18"));
