@@ -36,6 +36,9 @@ public class Topic_19_Textbox_textarea_exercise2 {
 
 	@Test
 	public void TC_01_Textbox_Textarea() { 
+		//Lấy giá trị trong textbox hàm .getAttribute();
+				//driver.findElement(By.cssSelector("input[title='First Name']")).getAttribute("value");
+		
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.findElement(By.cssSelector("input#txtUsername")).sendKeys("Admin");
 		driver.findElement(By.cssSelector("input#txtPassword")).sendKeys("admin123");
@@ -48,16 +51,13 @@ public class Topic_19_Textbox_textarea_exercise2 {
 
 		driver.findElement(By.cssSelector("input#firstName")).sendKeys(firstName);
 		driver.findElement(By.cssSelector("input#lastName")).sendKeys(lastName);
-		//get giá trị lưu vào biến
-		String firstNameNumber = driver.findElement(By.cssSelector("input#firstName")).getText();
-		String lastNameNumber = driver.findElement(By.cssSelector("input#lastName")).getText();
 
 		driver.findElement(By.cssSelector("input#btnSave")).click();
 		sleepInSecond(5);
 		
 		//Verify Update thành công
-		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='First Name']")).getText(), firstNameNumber);
-		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='Last Name']")).getText(), lastNameNumber);
+		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='First Name']")).getAttribute("value"), firstName);
+		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='Last Name']")).getAttribute("value"), lastName);
 		Assert.assertEquals(driver.findElement(By.cssSelector("input#personal_txtEmployeeId")).getText(), employeeId);
 		
 		//Verify Disable
@@ -81,9 +81,6 @@ public class Topic_19_Textbox_textarea_exercise2 {
 		lastNameInput.clear();
 		lastNameInput.sendKeys(editLastName);
 		
-		//Lấy giá trị lưu vào biến
-		String editFirstNameNumber = firstNameInput.getText();
-		String editLastNameNumber = lastNameInput.getText();
 
 		//Verify Enable
 		Assert.assertTrue(firstNameInput.isEnabled());
@@ -94,8 +91,8 @@ public class Topic_19_Textbox_textarea_exercise2 {
 		
 
 		//verify edit thành công
-		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='First Name']")).getText(), editFirstNameNumber);
-		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='Last Name']")).getText(), editLastNameNumber);
+		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='First Name']")).getAttribute("value"), editFirstName);
+		Assert.assertEquals(driver.findElement(By.cssSelector("input[title='Last Name']")).getAttribute("value"), editLastName);
 
 		//Verify Disable
 		WebElement editFirstName = driver.findElement(By.cssSelector("input#personal_txtEmpFirstName"));
